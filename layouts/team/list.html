@@ -1,6 +1,7 @@
 {{ define "body_classes" }}page-team-list{{ end }}
 
 {{ define "main" }}
+<!--
 <div class="intro">
   <div class="container">
     <div class="row justify-content-start">
@@ -17,10 +18,12 @@
       {{ end }}
     </div>
   </div>
+
 </div>
 
 <div class="container">
-  <div class="row">
+-->
+  <div class="row" style="padding-top:40px;">
     {{ range where .Pages.ByWeight ".Params.promoted" true }}
     <div class="col-12 col-md-6 mb-2">{{ .Render "summary-large" }}</div>
     {{ end }}
@@ -30,5 +33,5 @@
     <div class="col-12 col-md-4 mb-3">{{ .Render "summary" }}</div>
     {{ end }}
   </div>
-</div>
+  <!--</div>-->
 {{ end }}
